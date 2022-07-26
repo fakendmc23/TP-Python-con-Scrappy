@@ -1,0 +1,72 @@
+{
+	"url_paginas_disponibles": {
+		"aloise": "https://www.aloisetecno.com/search/page/1/?q=frase_a_buscar",
+		"ribeiro": "https://www.ribeiro.com.ar/browse/?No=0&Ntt=frase_a_buscar&Nrpp=1000",
+		"musimundo": "https://www.musimundo.com/search?q=frase_a_buscara&page=0",
+		"garbarino": "https://www.garbarino.com/q/frase_a_buscar/srch?q=frase_a_buscar&page=1",
+		"noblex": "https://www.noblex.com.ar/frase_a_buscar.html",
+		"atma": "https://www.atma.com.ar/frase_a_buscar.html",
+		"philco": "https://www.philco.com.ar/frase_a_buscar.html"
+	},
+	"paginas_disponibles": [
+		"aloise",
+		"musimundo",
+		"garbarino",
+		"ribeiro"
+	],
+	"limite_paginas": [
+		1,
+		1,
+		1,
+		1
+	],
+	"dic_selectores": {
+		"aloise": {
+			"selector_nombre": "#product-name",
+			"selector_precio": "#price_display",
+			"selector_categoria": ".breadcrumb-crumb:nth-child(5)",
+			"selector_imagen":".js-desktop-zoom.cloud-zoom",
+			"selector_ultima_pagina": ".pagination-arrow-link.m-left-half::attr(href)",
+			"selector_proximos_links": ".item-image-container div a::attr(href)"
+		},
+		"ribeiro": {
+			"selector_nombre": ".name-prod",
+			"selector_precio": ".precio1pagoFormat",
+			"selector_categoria": "#atg_store_breadcrumbs_mod .font-weight-bold",
+			"selector_imagen":"#zoom_03f",
+			"selector_ultima_pagina": "",
+			"selector_proximos_links": "li.col-6 > a::attr(href)"
+		},
+		"musimundo": {
+			"selector_nombre": ".mus-pro-name",
+			"selector_precio": ".mus-pro-price-number span",
+			"selector_categoria": "#breadcrumb li:nth-child(3) a",
+			"selector_imagen":"#productMainImage",
+			"selector_ultima_pagina": ".next a::attr(href)",
+			"selector_proximos_links": [
+				".productGridItem::attr(href)",
+				".productListItemPromotion::attr(href)"
+			]
+		},
+		"garbarino": {
+			"selector_nombre": "h1",
+			"selector_precio": "#final-price",
+			"selector_categoria": ".gb-breadcrumb li:nth-child(3) a",
+			"selector_imagen":".gb-main-detail-gallery-grid-img-full img",
+			"selector_ultima_pagina": "li.pagination__page:nth-child(3) > a:nth-child(1)",
+			"selector_proximos_links": "/html/body/div[4]/div[2]/div[2]/div/div/div/div/div/a/@href"
+		},
+		"noblex":{
+			"selector_titulos":".label",
+			"selector_valores":".data"
+		},
+		"atma":{
+			"selector_titulos":".label",
+			"selector_valores":".data"
+		},
+		"philco":{
+			"selector_titulos":".label",
+			"selector_valores":".data"
+		}
+	}
+}
